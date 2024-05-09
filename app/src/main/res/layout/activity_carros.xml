@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pages.CarrosActivity"
+    android:layout_margin="16dp" >
+
+    <TextView
+        android:id="@+id/tv_title_carros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        style="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Lista dos Carros" />
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/gray"
+        android:layout_width="0dp"
+        app:cardCornerRadius="25dp"
+        android:elevation="25dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_carros"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_carros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_carro"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/eletric_car"/>
+
+            <TextView
+                android:id="@+id/tv_bateria"
+                android:layout_width="70"
+                android:layout_height="wrap_content"
+                android:text="Bateria"
+                app:layout_constraintStart_toStartOf="@id/iv_carro"
+                app:layout_constraintTop_toBottomOf="@id/iv_carro" />
+
+
+           <TextView
+                android:id="@+id/tv_bateria_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/tv_bateria"
+                app:layout_constraintTop_toBottomOf="@id/iv_carro"
+                android:text="500Kwh" />
+
+            <TextView
+                android:id="@+id/tv_tv_potencia"
+                android:layout_width="70"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tv_bateria"
+                app:layout_constraintTop_toBottomOf="@id/tv_bateria"
+                android:text="Potencia" />
+
+
+           <TextView
+               android:id="@+id/tv_tv_potencia_value"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="400cv"
+               app:layout_constraintStart_toEndOf="@id/tv_tv_potencia"
+               app:layout_constraintTop_toBottomOf="@id/tv_bateria_value"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
