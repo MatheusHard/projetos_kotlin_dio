@@ -4,10 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.dio_kotlin.R
 
-class CarrosActivity : AppCompatActivity() {
+class RecycleViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_carros)
-
+        setContentView(R.layout.activity_recycle_view)
     }
 }

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dio_kotlin">
         <activity
+            android:name=".pages.RecycleViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".pages.ListViewActivity"
             android:exported="false" />
         <activity

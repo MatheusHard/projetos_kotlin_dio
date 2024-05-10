@@ -7,11 +7,14 @@ import android.widget.Button
 import com.example.dio_kotlin.pages.CalcularActivity
 import com.example.dio_kotlin.pages.CarrosActivity
 import com.example.dio_kotlin.pages.ListViewActivity
+import com.example.dio_kotlin.pages.RecycleViewActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var bt_tela_calcular : Button
     private lateinit var bt_tela_carros : Button
     private lateinit var bt_tela_list_view : Button
+    private lateinit var bt_tela_recycle_view : Button
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +33,7 @@ class MainActivity : AppCompatActivity() {
             bt_tela_calcular = findViewById(R.id.bt_tela_calcular)
             bt_tela_carros = findViewById(R.id.bt_tela_carros)
             bt_tela_list_view = findViewById(R.id.bt_tela_list_view)
+            bt_tela_recycle_view = findViewById(R.id.bt_tela_recycle_view)
 
         }
 
@@ -47,6 +51,10 @@ class MainActivity : AppCompatActivity() {
 
             bt_tela_list_view.setOnClickListener {
                 val intent = Intent(this, ListViewActivity::class.java)
+                startActivity(intent)
+            }
+            bt_tela_recycle_view.setOnClickListener {
+                val intent = Intent(this, RecycleViewActivity::class.java)
                 startActivity(intent)
             }
         }
