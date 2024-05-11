@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_margin="16dp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:elevation="25dp"
+        app:cardBackgroundColor="@color/gray"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_carros"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_carro"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/eletric_car"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_marca"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Marca"
+                app:layout_constraintStart_toStartOf="@id/iv_carro"
+                app:layout_constraintTop_toBottomOf="@id/iv_carro" />
+
+            <TextView
+                android:id="@+id/tv_marca_value"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TEsla"
+                app:layout_constraintStart_toEndOf="@id/tv_bateria"
+                app:layout_constraintTop_toBottomOf="@id/iv_carro" />
+
+            <TextView
+                android:id="@+id/tv_bateria"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Bateria"
+                app:layout_constraintStart_toStartOf="@id/tv_marca"
+                app:layout_constraintTop_toBottomOf="@id/tv_marca" />
+
+
+            <TextView
+                android:id="@+id/tv_bateria_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500Kwh"
+                app:layout_constraintStart_toEndOf="@id/tv_marca"
+                app:layout_constraintTop_toBottomOf="@id/tv_marca" />
+
+            <TextView
+                android:id="@+id/tv_tv_potencia"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Potencia"
+                app:layout_constraintStart_toStartOf="@id/tv_bateria"
+                app:layout_constraintTop_toBottomOf="@id/tv_bateria" />
+
+
+            <TextView
+                android:id="@+id/tv_tv_potencia_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="400cv"
+                app:layout_constraintStart_toEndOf="@id/tv_tv_potencia"
+                app:layout_constraintTop_toBottomOf="@id/tv_bateria_value" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
