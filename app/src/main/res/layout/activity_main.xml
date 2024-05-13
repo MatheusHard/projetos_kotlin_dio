@@ -12,7 +12,7 @@
         android:id="@+id/bt_tela_calcular"
         android:layout_height="wrap_content"
         android:layout_width="200dp"
-        android:layout_marginTop="255dp"
+        android:layout_marginTop="20dp"
         android:text="Tela Calcular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +47,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_tela_list_view" />
+
+    <Button
+        android:id="@+id/bt_tela_fragmet_carros"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tela Fragment CArros"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_tela_recycle_view" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
