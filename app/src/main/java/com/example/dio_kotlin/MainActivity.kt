@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.dio_kotlin.pages.*
+import com.example.dio_kotlin.pages.materials.ButtonMaterialDesignActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,6 +14,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var bt_tela_list_view : Button
     private lateinit var bt_tela_recycle_view : Button
     private lateinit var bt_tela_fragmet_carros : Button
+    private lateinit var bt_tela_button_material : Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +35,7 @@ class MainActivity : AppCompatActivity() {
             bt_tela_list_view = findViewById(R.id.bt_tela_list_view)
             bt_tela_recycle_view = findViewById(R.id.bt_tela_recycle_view)
             bt_tela_fragmet_carros = findViewById(R.id.bt_tela_fragmet_carros)
+            bt_tela_button_material = findViewById(R.id.bt_tela_button_material)
 
         }
 
@@ -57,6 +61,10 @@ class MainActivity : AppCompatActivity() {
             }
             bt_tela_fragmet_carros.setOnClickListener {
                 val intent = Intent(this, CarrosToFragmentActivity::class.java)
+                startActivity(intent)
+            }
+            bt_tela_button_material.setOnClickListener {
+                val intent = Intent(this, ButtonMaterialDesignActivity::class.java)
                 startActivity(intent)
             }
         }

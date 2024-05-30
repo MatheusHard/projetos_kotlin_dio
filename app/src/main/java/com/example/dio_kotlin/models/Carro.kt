@@ -5,5 +5,6 @@ data class Carro (
     val bateria: String,
     val potencia: String,
     val marca : String,
-    val urlPhoto : String
+    val urlPhoto : String,
+    val recarga: String
 )
