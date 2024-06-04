@@ -1,5 +1,7 @@
 package com.example.dio_kotlin.pages
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
@@ -17,6 +19,9 @@ class CarrosToFragmentActivity : AppCompatActivity() {
         setContentView(R.layout.activity_carros_to_fragment)
         initComponents()
         initListenners()
+    }
+    companion object {
+        fun createIntent(context: Context) : Intent = Intent(context, CarrosToFragmentActivity::class.java)
     }
     fun initComponents(){
         tl_layout = findViewById(R.id.tl_carros)

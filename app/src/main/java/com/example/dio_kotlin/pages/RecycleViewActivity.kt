@@ -1,5 +1,7 @@
 package com.example.dio_kotlin.pages
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -32,7 +34,9 @@ class RecycleViewActivity : AppCompatActivity() {
         initComponents()
         //initRecyclerView()
     }
-
+    companion object {
+        fun createIntent(context: Context) : Intent = Intent(context, RecycleViewActivity::class.java)
+    }
     override fun onResume() {
         super.onResume()
         if(utils.isConnected()){

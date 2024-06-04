@@ -1,5 +1,7 @@
 package com.example.dio_kotlin.pages
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -17,7 +19,9 @@ class ListViewActivity : AppCompatActivity() {
         initList()
 
     }
-
+    companion object {
+        fun createIntent(context: Context) : Intent = Intent(context, ListViewActivity::class.java)
+    }
     private fun initList() {
         var dados = arrayOf(
             "Hamburguer", "Cachorro QUente", "PAstelo", "Açai"

@@ -4,10 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.dio_kotlin.databinding.ActivityMainBinding
 import com.example.dio_kotlin.pages.*
 import com.example.dio_kotlin.pages.materials.ButtonMaterialDesignActivity
 
 class MainActivity : AppCompatActivity() {
+
+    private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
     private lateinit var bt_tela_calcular : Button
     private lateinit var bt_tela_carros : Button
@@ -19,11 +22,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
+        //setSupportActionBar(binding.toolbar)
 
-
-
-            initComponents()
+       // initComponents()
             initListenners()
 
         }
@@ -40,32 +42,24 @@ class MainActivity : AppCompatActivity() {
         }
 
         fun initListenners(){
-            //CAlcular Kms
-            bt_tela_calcular.setOnClickListener {
-                val intent = Intent(this, CalcularActivity::class.java)
-                startActivity(intent)
-            }
 
-            bt_tela_carros.setOnClickListener {
-                val intent = Intent(this, CarrosActivity::class.java)
-                startActivity(intent)
+            binding.btTelaCalcular.setOnClickListener {
+                startActivity(CalcularActivity.createIntent(this))
             }
-
-            bt_tela_list_view.setOnClickListener {
-                val intent = Intent(this, ListViewActivity::class.java)
-                startActivity(intent)
+            binding.btTelaCarros.setOnClickListener {
+               startActivity(CarrosActivity.createIntent(this))
             }
-            bt_tela_recycle_view.setOnClickListener {
-                val intent = Intent(this, RecycleViewActivity::class.java)
-                startActivity(intent)
+            binding.btTelaListView.setOnClickListener {
+                startActivity(ListViewActivity.createIntent(this))
             }
-            bt_tela_fragmet_carros.setOnClickListener {
-                val intent = Intent(this, CarrosToFragmentActivity::class.java)
-                startActivity(intent)
+            binding.btTelaRecycleView.setOnClickListener {
+                startActivity(RecycleViewActivity.createIntent(this))
             }
-            bt_tela_button_material.setOnClickListener {
-                val intent = Intent(this, ButtonMaterialDesignActivity::class.java)
-                startActivity(intent)
+            binding.btTelaFragmetCarros.setOnClickListener {
+                startActivity(CarrosToFragmentActivity.createIntent(this))
+            }
+            binding.btTelaButtonMaterial.setOnClickListener {
+                startActivity(ButtonMaterialDesignActivity.createIntent(this))
             }
         }
     }

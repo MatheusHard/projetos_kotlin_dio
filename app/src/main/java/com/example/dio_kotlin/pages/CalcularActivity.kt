@@ -1,5 +1,7 @@
 package com.example.dio_kotlin.pages
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -23,6 +25,9 @@ class CalcularActivity : AppCompatActivity() {
         initListenners()
     }
 
+    companion object {
+        fun createIntent(context: Context) : Intent = Intent(context, CalcularActivity::class.java)
+    }
     fun initListenners() {
 
         bt_calcular.setOnClickListener {
