@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/personalDataFragment"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <fragment
+        android:id="@+id/personalDataFragment"
+        android:name="com.example.dio_kotlin.pages.fragments.PersonalDataFragment"
+        android:label="PersonalDataFragment"
+        tools:layout="@layout/fragment_personal_data">
+        <action
+            android:id="@+id/go_to_adressFragment"
+            app:destination="@id/adressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adressFragment"
+        android:name="com.example.dio_kotlin.pages.fragments.AdressFragment"
+        android:label="AdressFragment"
+        tools:layout="@layout/fragment_adress_data">
+        <argument
+            android:name="personModel"
+            app:argType="com.example.dio_kotlin.models.PersonModel" />
+    </fragment>
+</navigation>

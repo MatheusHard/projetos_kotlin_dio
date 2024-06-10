@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">dio_kotlin</string>
+    <string name="nome_">Nome</string>
+    <string name="idade">Idade</string>
+    <string name="next">Next</string>
+    <string name="n_mero">Número</string>
+    <string name="rua">Rua</string>
 </resources>
