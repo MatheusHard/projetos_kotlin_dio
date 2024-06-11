@@ -22,5 +22,17 @@
         <argument
             android:name="personModel"
             app:argType="com.example.dio_kotlin.models.PersonModel" />
+        <action
+            android:id="@+id/go_to_exibirDadosFragment"
+            app:destination="@id/exibirDadosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exibirDadosFragment"
+        android:name="com.example.dio_kotlin.pages.fragments.ExibirDadosFragment"
+        android:label="ExibirDadosFragment"
+        tools:layout="@layout/fragment_exibir_dados">
+        <argument
+            android:name="personModel"
+            app:argType="com.example.dio_kotlin.models.PersonModel" />
     </fragment>
 </navigation>

@@ -1,6 +1,6 @@
 package com.example.dio_kotlin.pages.fragments
 
-import android.content.ContentValues.TAG
+import androidx.navigation.fragment.findNavController
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -31,10 +31,10 @@ class AdressFragment : Fragment() {
                 rua =  binding.tilRua.text,
                 numero =  binding.tilNumero.text.toInt()
             )
-            //TODO
             //redirect to next Fragment
-            //val direction = PersonalDataFragmentDirections.goToAdressFragment(modelPerson)
-            //findNavController().navigate(direction)
+
+            val direction = AdressFragmentDirections.goToExibirDadosFragment(modelPerson)
+            findNavController().navigate(direction)
         }
     }
 
